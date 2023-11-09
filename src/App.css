@@ -1,38 +1,451 @@
-.App {
+.app {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 3rem;
+  overflow-x: hidden;
+}
+
+.logo {
+  color: #56b280;
+  margin-left: 8rem;
+  width: 5.32819rem;
+  height: 0.91344rem;
+}
+
+.center-head {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  margin-left: 14rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fix {
+  margin-left: 4rem;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 8rem;
+  margin: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.proflogo {
+  margin-right: 2rem;
+}
+
+.image {
+  width: 100%;
+  height: 48.75rem;
+  flex-shrink: 0;
+  background-image: url("../public/bg-image.png");
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card {
+  width: 45.625rem;
+  height: 21.8125rem;
+  flex-shrink: 0;
+  border-radius: 0.125rem;
+  background: rgba(247, 248, 250, 0.8);
+  backdrop-filter: blur(12px);
+  color: #f7f8facc, 80%;
+  text-align: center;
+  align-items: center;
+}
+
+.card h1 {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 0.5rem 2.75rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border-radius: 0.25rem;
+  background-color: #56b280;
+  border: none;
+  color: #fff;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.29031rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+}
+
+.producs {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60%;
 }
 
-.App-link {
-  color: #61dafb;
+.producs h1 {
+  color: #0b254b;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.6rem; /* 144% */
+  letter-spacing: -0.05625rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.producs p {
+  color: #5e6e89;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.725rem; /* 153.333% */
+  letter-spacing: 0.00625rem;
+  margin-top: -1rem;
+}
+
+.candle p {
+  color: #1d293f;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.725rem; /* 172.5% */
+  letter-spacing: -0.05625rem;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.candle span {
+  color: #56b280;
+  text-align: right;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.725rem; /* 138% */
+  display: flex;
+  justify-content: end;
+  background: #fff;
+  padding: 0.5rem;
+  margin-top: -1rem;
+}
+
+.candle {
+  margin: 1rem;
+  cursor: pointer;
+  background: rgb(240, 239, 239);
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.render {
+  display: flex;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin-top: 1em;
+}
+
+.check h1 {
+  color: #0b254b;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.6rem; /* 144% */
+  letter-spacing: -0.05625rem;
+}
+
+.choosed-product {
+  display: flex;
+  width: 90%;
+}
+
+.choosed-product img {
+  background: rgb(247, 245, 245);
+  width: 120px;
+  height: 120px;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-details h3 {
+  color: #272727;
+  margin-top: 10px;
+  font-family: Poppins;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.quantity {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.qty2 {
+  border: 1px solid rgb(21, 218, 21);
+  padding: 0 5px 0 2px;
+}
+
+.qty2 span {
+  padding: 3px;
+  cursor: pointer;
+}
+
+.remove {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: rgb(22, 206, 22);
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.total {
+  color: #272727;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 128% */
+  letter-spacing: -0.05625rem;
+}
+
+.quantity span {
+  color: #272727;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 128% */
+  letter-spacing: -0.05625rem;
+}
+
+.sub {
+  display: flex;
+  margin: 1rem;
+}
+
+.sub span {
+  margin-right: 1rem;
+  margin-top: 0.5em;
+  color: #272727;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 128% */
+  letter-spacing: -0.05625rem;
+}
+
+.buy {
+  border-radius: 0.25rem;
+  background: #56b280;
+  display: inline-flex;
+  padding: 0.5rem 2.75rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.29031rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footer {
+  width: 100%;
+  height: 20rem;
+  background: #272727;
+  display: flex;
+}
+
+.line {
+  height: 1px;
+  color: #fff;
+  background: #fff;
+
+  width: 70rem;
+  margin-left: 4rem;
+  margin-top: 4em;
+}
+
+.candleaf {
+  display: flex;
+  flex-direction: column;
+  margin-left: -65rem;
+  margin-top: 5rem;
+  width: 50%;
+}
+
+.candleaf p {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.425rem; /* 142.5% */
+  letter-spacing: -0.03125rem;
+}
+
+.contact {
+  display: flex;
+}
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 2rem;
+  margin-top: 4rem;
+}
+
+.discover h3 {
+  color: #56b280;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.8rem; /* 180% */
+}
+
+.discover a {
+  color: #e1e1e1;
+  border-bottom: none;
+  border-style: none;
+  text-decoration-line: none;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.8rem; /* 180% */
+}
+
+.modal {
+  width: 65.375rem;
+  height: 40.75rem;
+  flex-shrink: 0;
+  border-radius: 3.125rem;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  margin-left: 8rem;
+}
+
+.modal {
+  display: flex;
+}
+
+.hand {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.hand h3 {
+  text-align: center;
+}
+
+.hand img {
+  width: 500px;
+  height: 500px;
+}
+
+.details {
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.details h3 {
+  margin-bottom: 4rem;
+  color: #56b280;
+}
+
+.details p {
+  margin-bottom: 1rem;
+}
+
+.quantity2 {
+  margin-top: 4rem;
+}
+
+.add {
+  margin-top: 6rem;
+  border: none;
+  background-color: #56b280;
+  cursor: pointer;
+}
+
+.plus {
+  border: 1px solid #56b280;
+  width: fit-content;
+  padding: 0 0.9rem;
+}
+
+.plus span {
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.quantity2 p {
+  color: #272727;
+
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: -0.05625rem;
 }
